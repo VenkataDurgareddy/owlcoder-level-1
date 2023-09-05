@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string X, Y;
+    cin >> X >> Y; 
+
+    int calvinScore = 0;
+    int djangoScore = 0;
+
+    for (int i = 0; i < X.length(); i++) {
+        if (X[i] > Y[i]) {
+            calvinScore++;
+        } else if (X[i] < Y[i]) {
+            djangoScore++;
+        }
+    }
+
+    if (calvinScore > djangoScore) {
+        cout << "Calvin";
+    } else if (calvinScore < djangoScore) {
+        cout << "Django";
+    } else {
+        cout << "Tie";
+    }
+
+    return 0;
+}
