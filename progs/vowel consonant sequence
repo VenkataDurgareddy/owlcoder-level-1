@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    string s1;
+    int j=0;
+    for(int i=0;i<s.length();i++)
+    {
+        if(s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u')
+        {
+            if(s1.empty() or s1[j-1]=='C')
+            {
+                  string s2="V";
+                  s1=s1+s2;
+                  j++;
+            }
+        }
+        else{
+            if(s1.empty() or s1[j-1]=='V')
+            {
+                 string s2="C";
+                 s1=s1+s2;
+                 j++;
+            }
+        }
+    }
+    cout<<s1;
+}
