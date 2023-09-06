@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    set<pair<int,int>>s;
+    int n;
+    cin>>n;
+    int c=0;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            s.insert({i,j});
+        }
+    }
+    for(auto it:s)
+    {
+        int sum=it.first+it.second;
+        if(sum%2!=0)
+        {
+            c++;
+        }
+    }
+    cout<<c;
+}
