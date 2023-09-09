@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int h,m;
+    cin>>h>>m;
+    int hrs=23-h;
+    int mins=60-m;
+    int hrs_tomin=0;
+    for(int i=0;i<hrs;i++)
+    {
+        hrs_tomin=hrs_tomin+60;
+    }
+    cout<<hrs_tomin+mins;
+}
