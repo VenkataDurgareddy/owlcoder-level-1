@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x;
+    cin>>x;
+    int ele=0;
+    if(x<=5)
+    {
+        cout<<1;
+    }
+    else{
+    int diff=abs(ele-x);
+    int move=diff/5;
+
+    if(move%5!=0)
+    {
+        move++;
+    }
+    cout<<move;
+    }
+}
