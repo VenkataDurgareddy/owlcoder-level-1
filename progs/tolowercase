@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    string s1;
+    for(int i=0;i<s.length();i++)
+    {
+        if(s[i]>='a' and s[i]<='z')
+        {
+            s1=s1+s[i];
+        }
+        else{
+             int ascii=(s[i]+32);
+        char c=(char)ascii;
+        s1=s1+c;
+        }
+    }
+    cout<<s1;
+}
