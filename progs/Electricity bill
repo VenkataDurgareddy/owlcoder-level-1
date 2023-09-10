@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    float unit_cost;
+    if(n<=199)
+    {
+        unit_cost=1.20;
+    }
+    else if(n>=200 and n<400)
+    {
+        unit_cost=1.40;
+    }
+    else if(n>=400 and n<600)
+    {
+        unit_cost=1.60;
+    }
+    else if(n>=600 and n<800)
+    {
+        unit_cost=1.80;
+    }
+    else{
+        unit_cost=2.00;
+    }
+    double bill=n*unit_cost;
+    double surcharge=0;
+    if(bill>400)
+    {
+        surcharge=(bill/100.0)*15;
+    }
+   float total_amount=bill+surcharge;
+   cout<<"Units Consumed: "<<n<<endl;
+   cout<<"Cost per Unit: ";
+   printf("%.2f",unit_cost);
+   cout<<endl;
+   cout<<"Bill: ";
+   printf("%.2f",bill);
+   cout<<endl;
+   cout<<"Surcharge: ";
+   printf("%.2f",surcharge);
+   cout<<endl;
+   cout<<"Total Amount: ";
+   printf("%.2f",total_amount);
+    
+}
