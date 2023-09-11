@@ -1,0 +1,3 @@
+octal_num = int(input())
+decimal_value = int(str(octal_num), 8)
+print(decimal_value)
