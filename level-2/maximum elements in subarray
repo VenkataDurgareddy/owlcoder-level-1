@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int m;
+    int k;
+    cin>>m;
+    cin>>k;
+    int arr[m];
+    for(int i=0;i<m;i++)
+    {
+        cin>>arr[i];
+    }
+    int mine=INT_MIN;
+    vector<int>v;
+    for(int i=0;i<=(m-k);i++)
+    {
+        mine=arr[i];
+        for(int j=i;j<(i+k);j++)
+        {
+            if(mine<arr[j])
+            {
+                mine=arr[j];
+            }
+        }
+        v.push_back(mine);
+    }
+    for(auto it:v)
+    {
+        cout<<it<<" ";
+    }
+}
