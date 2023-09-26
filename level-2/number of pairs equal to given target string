@@ -1,0 +1,64 @@
+Program Description :
+Here given one array of strings and one target string. You should count the number of pairs (The combination pair should be equal to the Target string). 
+
+Input Format :
+First line consist of len of an array
+
+Second line consist of an array with space sepreated
+
+Third line consist of Target in the form of string
+
+Output Format :
+The output should be in integer format
+
+Input :
+8
+
+["9848","98","84","48","89","48","98","98"]
+
+"9848" 
+
+
+Output :
+6
+===================================================================================================================
+program:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    
+    vector<string> arr(n);
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    string target;
+    cin >> target;
+    
+    unordered_map<string, int> freq;
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+        
+                if(i!=j)
+                {
+                string s = arr[i] + arr[j];
+                freq[s]++;
+                }
+        
+        }
+    }
+    
+    int count = freq[target];
+    cout << count << endl; 
+    
+    return 0;
+}
