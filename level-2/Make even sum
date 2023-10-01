@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int odd_count = 0, even_count = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            even_count++;
+        } else {
+            odd_count++;
+        }
+    }
+
+    // To have pairs with even sums, both odd and even counts should be even.
+    if (odd_count % 2 == 0 && even_count % 2 == 0) {
+        cout << "1";
+    } else {
+        cout << "0";
+    }
+
+    return 0;
+}
