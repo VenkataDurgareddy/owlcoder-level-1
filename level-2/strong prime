@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int k=n;
+    int num=n;
+    int c=0;
+    int first=0;
+    int second=0;
+    for(int i=2;i<sqrt(n);i++)
+    {
+        if(n%i==0)
+        {
+            c=1;
+            break;
+        }
+    }
+    if(c==0)
+    {
+       while(true)
+       {
+           n--;
+           int flag=0;
+           for(int i=2;i<=sqrt(n);i++)
+           {
+               if(n%i==0)
+               {
+                 flag=1;
+                 break;
+               }
+           }
+           if(flag==0)
+           {
+               first=n;
+               break;
+           }
+       }
+       while(true)
+       {
+           k++;
+           int flag=0;
+           for(int i=2;i<=sqrt(n);i++)
+           {
+               if(k%i==0)
+               {
+                 flag=1;
+                 break;
+               }
+           }
+           if(flag==0)
+           {
+               second=k;
+               break;
+           }
+       }
+       int mean=(first+second)/2;
+       if(mean<num)
+       {
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+       
+    }
+    else{
+        cout<<"NO";
+    }
+}
