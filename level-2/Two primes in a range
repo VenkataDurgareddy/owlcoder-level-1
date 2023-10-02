@@ -1,0 +1,51 @@
+make_pair() is a function which is used to pair a elements 
+================================================
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int m,n;
+    cin>>m>>n;
+    vector<int>v;
+    for(int i=m;i<=n;i++)
+    {
+        if(i>1)
+        {
+            int num=i;
+            int flag=0;
+            if(i==2 or i==3)
+            {
+                v.push_back(i);
+            }
+            for(int j=2;j<=sqrt(n);j++)
+            {
+                if(num%j==0)
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)
+            {
+            v.push_back(num);
+            }
+        }
+    }
+    int siz=v.size();
+    int count=0;
+    vector<pair<int,int>>ans;
+    while(count<siz-1)
+    {
+        int sub=abs(v[count]-v[count+1]) ;
+        if(sub==2)
+        {
+            ans.push_back(make_pair(v[count],v[count+1]));
+        }
+        count++;
+    }
+    for(auto it:ans)
+    {
+        
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+}
