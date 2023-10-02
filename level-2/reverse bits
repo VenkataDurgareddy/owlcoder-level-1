@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+     uint32_t n;
+     cin>>n;
+     uint32_t f=31,l=0;
+     uint32_t rev=0;
+    while(f>l)
+    {
+        if((n&(1<<f))!=0)
+        {
+            rev=rev|(1<<l);
+        }
+        if((n&(1<<l))!=0)
+        {
+            rev=rev|(1<<f);
+        }
+        f--;
+        l++;
+    }
+    cout<<rev;
+}
