@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int cust[n];
+    int grump[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>cust[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        cin>>grump[i];
+    }
+    int mine=0;
+    cin>>mine;
+    int sacust=0;
+    for(int i=0;i<n;i++)
+    {
+        if(grump[i]==0)
+        {
+            sacust+=cust[i];
+        }
+    }
+    int grump_cust=0;
+    for(int i=0;i<=n-mine;i++)
+    {
+        int temp=0;
+        for(int j=i;j<(i+mine);j++)
+        {
+            if(grump[j]==1)
+            {
+                temp=temp+cust[j];
+            }
+        }
+        if(grump_cust<=temp)
+        {
+            grump_cust=temp;
+        }
+    }
+    cout<<sacust+grump_cust;
+
+}
