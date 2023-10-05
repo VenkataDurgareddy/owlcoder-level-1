@@ -1,0 +1,34 @@
+Three divisors of a number within a range means the square of the prime numbers count within the range
+======================================================================================================================
+#include<bits/stdc++.h>
+using namespace std;
+bool isprime(int j)
+{
+    for(int i=2;i<=sqrt(j);i++)
+    {
+        if(j%i==0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int c=0;
+    int count=0;
+    for(int i=2;i<=sqrt(n);i++)
+    {
+        if(isprime(i))
+        {
+            if(i*i<=n)
+            {
+                count++;
+            }
+        }
+    }
+    cout<<count;
+
+}
