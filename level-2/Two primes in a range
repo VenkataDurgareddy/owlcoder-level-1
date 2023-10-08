@@ -1,5 +1,6 @@
 make_pair() is a function which is used to pair a elements 
 ================================================
+***Two primes in a range ****
 #include<bits/stdc++.h>
 using namespace std;
 int main()
