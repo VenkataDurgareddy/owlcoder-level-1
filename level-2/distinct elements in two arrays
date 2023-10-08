@@ -1,3 +1,4 @@
+****Distinct elements in two arrays ****
 def fun(arr1, arr2):
     set1 = set(arr1)
     set2 = set(arr2)
