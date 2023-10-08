@@ -1,3 +1,4 @@
+****substring size three*****
 def count_good_substrings(s):
     count = 0
     for i in range(len(s) - 2):
