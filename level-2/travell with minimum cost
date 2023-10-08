@@ -1,3 +1,4 @@
+****Travell with minimum cost*****
 n,m,a,b=map(int,input().split())
 f=n 
 k=f//m 
