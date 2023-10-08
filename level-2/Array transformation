@@ -1,3 +1,4 @@
+*****Array Transformation ****
 n=int(input())
 arr=list(map(int,input().split()))
 s=1 
