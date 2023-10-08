@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    vector<int>v1;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        v1.push_back(arr[i]);
+    }
+    vector<int>v2;
+    for(int i=0;i<n;i++)
+    {
+        int maxi=-1;
+        for(int j=0;j<i;j++)
+        {
+            if(v1[j]<v1[i])
+            {
+                maxi=max(maxi,arr[j]);
+            }
+        }
+        v2.push_back(maxi);
+    }
+    for(auto it:v2)
+    {
+        cout<<it<<" ";
+    }
+}
