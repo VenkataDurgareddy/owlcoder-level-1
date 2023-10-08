@@ -1,3 +1,4 @@
+****Collatz sequence ****
 n = int(input())
 l = []
 l.append(n)
