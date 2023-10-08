@@ -1,3 +1,4 @@
+****count divisible digits*****
 n = int(input())
 t = n
 c = 0
