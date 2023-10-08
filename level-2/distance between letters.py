@@ -1,3 +1,4 @@
+****Distance between letters*****
 s=input().lower()
 l=list(map(int,input().split()))
 c=0
