@@ -1,3 +1,4 @@
+******Right rotate an array k times *****
 n,k=map(int,input().split())
 k=k%n;
 arr=list(map(int,input().split()))
