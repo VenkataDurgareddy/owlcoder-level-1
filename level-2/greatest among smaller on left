@@ -1,3 +1,4 @@
+*****Greater among smaller on left****
 #include<bits/stdc++.h>
 using namespace std;
 int main()
