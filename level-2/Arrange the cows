@@ -1,3 +1,4 @@
+****Arrange the cows ****
 #include<bits/stdc++.h>
 using namespace std;
 bool canweplacecow(int *arr,int mid,int cows,int n)
