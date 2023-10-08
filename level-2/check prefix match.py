@@ -1,3 +1,4 @@
+***Check prefix match ***
 n=int(input())
 arr=list(map(str,input().split()))
 k=int(input())
