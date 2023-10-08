@@ -1,0 +1,9 @@
+n = int(input())
+t = n
+c = 0
+while t!=0:
+    d = t%10
+    if d!=0 and n%d == 0:
+        c+=1
+    t = t//10
+print(c)
