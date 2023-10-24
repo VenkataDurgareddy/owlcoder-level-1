@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    set<int>s1;
+    set<int>s2;
+    for(int i=0;i<n;i++)
+    {
+        int k;
+        cin>>k;
+        s1.insert(k);
+    }
+    for(int i=0;i<m;i++)
+    {
+        int k;
+        cin>>k;
+        s2.insert(k);
+    }
+    vector<int>v1;
+    vector<int>v2;
+    for(auto it:s1)
+    {
+        v1.push_back(it);
+    }
+    for(auto it:s2)
+    {
+        v2.push_back(it);
+    }
+    int count=0;
+    for(int i=0;i<v1.size();i++)
+    {
+        int c=0;
+        for(int j=0;j<v2.size();j++)
+        {
+            if(v1[i]==v2[j])
+            {
+                c=1;
+                break;
+            }
+        }
+        if(c==0)
+        {
+            count++;
+        }
+    }
+    for(int i=0;i<v2.size();i++)
+    {
+        int c=0;
+        for(int j=0;j<v1.size();j++)
+        {
+            if(v2[i]==v1[j])
+            {
+                c=1;
+                break;
+            }
+        }
+        if(c==0)
+        {
+            count++;
+        }
+    }
+    cout<<count;
+}
